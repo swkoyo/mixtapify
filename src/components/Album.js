@@ -34,74 +34,76 @@ class Album extends Component {
     this.setState({ currentSong: song });
   }
 
+  getButtons(index) {
+    let btns = {
+      songIndex: document.querySelectorAll(".songIndex")[index],
+      playBtn: document.querySelectorAll(".playBtn")[index],
+      pauseBtn: document.querySelectorAll(".pauseBtn")[index]
+    }
+    return btns;
+  }
+
+  showPlayBtn(obj) {
+    obj.songIndex.style.display = 'none';
+    obj.playBtn.style.display = 'inline';
+    obj.pauseBtn.style.display = 'none';
+  }
+
+  showPauseBtn(obj) {
+    obj.songIndex.style.display = 'none';
+    obj.playBtn.style.display = 'none';
+    obj.pauseBtn.style.display = 'inline';
+  }
+
+  showSongIndex(obj) {
+    obj.songIndex.style.display = 'inline';
+    obj.playBtn.style.display = 'none';
+    obj.pauseBtn.style.display = 'none';
+  }
+
   handleSongClick(song, index) {
     const isSameSong = this.state.currentSong === song;
-    const playBtn = document.querySelectorAll(".playBtn");
-    const pauseBtn = document.querySelectorAll(".pauseBtn");
     const songIndex = document.querySelectorAll(".songIndex");
-    const currPlayBtn = document.querySelectorAll(".playBtn")[index];
-    const currPauseBtn = document.querySelectorAll(".pauseBtn")[index];
-    const currSongIndex = document.querySelectorAll(".songIndex")[index];
+    const buttons = this.getButtons(index);
+
     if (isSameSong) {
       if (this.state.isPlaying) { //IF CLICKED SONG IS THE CURRENT SONG AND PLAYING, ON CLICK, PAUSE THE SONG AND CHANGE ICON TO PLAY BUTTON
-        currPlayBtn.style.display = 'inline';
-        currPauseBtn.style.display = 'none';
-        currSongIndex.style.display = 'none';
+        this.showPlayBtn(buttons);
         this.pause();
       } else if (!this.state.isPlaying) { //IF CLICKED SONG IS CURRENT SONG AND PAUSED, ON CLICK, PLAY THE SONG AND CHANGE ICON TO PAUSE BUTTON
-        currPlayBtn.style.display = 'none';
-        currPauseBtn.style.display = 'inline';
-        currSongIndex.style.display = 'none';
+        this.showPauseBtn(buttons);
         this.play();
       }
     } else { //IF CLICKED SONG ISN'T THE CURRENT SONG, IT WILL NEVER BE PLAYING
       this.setSong(song); //SET CURRENT SONG TO NEW, CLICKED SONG
-      for (let i = 0; i < playBtn.length; i++) { //CHANGE ALL OTHER SONG ICONS TO SONG INDEX
-        if (playBtn[i] !== currPlayBtn) {
-          playBtn[i].style.display = 'none';
-          pauseBtn[i].style.display = 'none';
-          songIndex[i].style.display = 'inline';
+      for (let i = 0; i < songIndex.length; i++) { //CHANGE ALL OTHER SONG ICONS TO SONG INDEX
+        if (songIndex[i] !== buttons.songIndex) {
+          let iButtons = this.getButtons(i);
+          this.showSongIndex(iButtons);
         }
       }
       // CHANGE ICON OF THE CLICKED, NEW CURRENT SONG TO PAUSE BUTTON
-      currPlayBtn.style.display = 'none';
-      currPauseBtn.style.display = 'inline';
-      currSongIndex.style.display = 'none';
-
-      // playBtn.map(btn => {  // OUTPUTTING ERROR, CANT USE FILTER ON UNDEFINED
-      //   if (btn !== currPlayBtn) {
-      //     btn.style.display = 'none';
-      //   }
-      // })
-
+      this.showPauseBtn(buttons);
       this.play();
     }
   }
 
-  //WE ONLY NEED TO HANDLE MOUSE ENTER AND LEAVE FOR SONGS THAT ARE NOT THE CURRENT SONG, SINCE handleSongClick() CHANGES ICONS OF CURRENT SONGS ON CLICK
   handleEnter(song, index) {
+    //WE ONLY NEED TO HANDLE MOUSE ENTER AND LEAVE FOR SONGS THAT ARE NOT THE CURRENT SONG, SINCE handleSongClick() CHANGES ICONS OF CURRENT SONGS ON CLICK
     const isSameSong = this.state.currentSong === song;
-    const playBtn = document.querySelectorAll(".playBtn")[index];
-    const pauseBtn = document.querySelectorAll(".pauseBtn")[index];
-    const songIndex = document.querySelectorAll(".songIndex")[index];
+    const buttons = this.getButtons(index);
     //IF HOVERING OVER A SONG THAT ISN'T PLAYING, CHANGE THE ICON TO A PLAY BUTTON
     if (!isSameSong) {
-      songIndex.style.display = 'none';
-      playBtn.style.display = 'inline';
-      pauseBtn.style.display = 'none';
+      this.showPlayBtn(buttons);
     }
   }
 
   handleLeave(song, index) {
     const isSameSong = this.state.currentSong === song;
-    const playBtn = document.querySelectorAll(".playBtn")[index];
-    const pauseBtn = document.querySelectorAll(".pauseBtn")[index];
-    const songIndex = document.querySelectorAll(".songIndex")[index];
+    const buttons = this.getButtons(index);
     //WHEN LEAVING A SONG THAT ISN'T PLAYING, CHANGE THE ICON TO THE SONG INDEX
     if (!isSameSong) {
-      songIndex.style.display = 'inline';
-      playBtn.style.display = 'none';
-      pauseBtn.style.display = 'none';
+      this.showSongIndex(buttons);
     }
   }
 
