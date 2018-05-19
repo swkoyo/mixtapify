@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
+import PlayerBar from './PlayerBar';
 
 class Album extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class Album extends Component {
 
     this.state = {
       album: album,
-      currentSong: album.songs[0],
+      currentSong: [],
       isPlaying: false
     };
 
@@ -34,13 +35,97 @@ class Album extends Component {
     this.setState({ currentSong: song });
   }
 
+  getButtons(index) {
+    let btns = {
+      songIndex: document.querySelectorAll(".songIndex")[index],
+      playBtn: document.querySelectorAll(".playBtn")[index],
+      pauseBtn: document.querySelectorAll(".pauseBtn")[index]
+    }
+    return btns;
+  }
+
+  showPlayBtn(obj) {
+    obj.songIndex.style.display = 'none';
+    obj.playBtn.style.display = 'inline';
+    obj.pauseBtn.style.display = 'none';
+  }
+
+  showPauseBtn(obj) {
+    obj.songIndex.style.display = 'none';
+    obj.playBtn.style.display = 'none';
+    obj.pauseBtn.style.display = 'inline';
+  }
+
+  showSongIndex(obj) {
+    obj.songIndex.style.display = 'inline';
+    obj.playBtn.style.display = 'none';
+    obj.pauseBtn.style.display = 'none';
+  }
+
+  handlePrevClick() {
+    const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
+    const newIndex = Math.max(0, currentIndex - 1);
+    const newSong = this.state.album.songs[newIndex];
+    this.setSong(newSong);
+
+    //CHANGE ALL OTHER SONG ICONS TO SONG INDEX
+    this.state.album.songs.map(songInArr => {
+      if (songInArr !== newSong) {
+        this.showSongIndex(this.getButtons(this.state.album.songs.indexOf(songInArr)));
+      }
+    });
+
+    // CHANGE ICON OF NEW SONG TO PAUSE BUTTON
+    this.showPauseBtn(this.getButtons(newIndex));
+
+    this.play();
+  }
+
   handleSongClick(song) {
     const isSameSong = this.state.currentSong === song;
-    if (this.state.isPlaying && isSameSong) {
-      this.pause();
-    } else {
-      if (!isSameSong) { this.setSong(song); }
+    const currentIndex = this.state.album.songs.indexOf(song);
+    const buttons = this.getButtons(currentIndex);
+
+    if (isSameSong) {
+      if (this.state.isPlaying) { //IF CLICKED SONG IS THE CURRENT SONG AND PLAYING, ON CLICK, PAUSE THE SONG AND CHANGE ICON TO PLAY BUTTON
+        this.showPlayBtn(buttons);
+        this.pause();
+      } else if (!this.state.isPlaying) { //IF CLICKED SONG IS CURRENT SONG AND PAUSED, ON CLICK, PLAY THE SONG AND CHANGE ICON TO PAUSE BUTTON
+        this.showPauseBtn(buttons);
+        this.play();
+      }
+    } else { //IF CLICKED SONG ISN'T THE CURRENT SONG, IT WILL NEVER BE PLAYING
+      this.setSong(song); //SET CURRENT SONG TO NEW, CLICKED SONG
+
+      //CHANGE ALL OTHER SONG ICONS TO SONG INDEX
+      this.state.album.songs.map(songInArr => {
+        if (songInArr !== song) {
+          this.showSongIndex(this.getButtons(this.state.album.songs.indexOf(songInArr)));
+        }
+      });
+
+      // CHANGE ICON OF THE CLICKED, NEW CURRENT SONG TO PAUSE BUTTON
+      this.showPauseBtn(buttons);
       this.play();
+    }
+  }
+
+  handleEnter(song, index) {
+    //WE ONLY NEED TO HANDLE MOUSE ENTER AND LEAVE FOR SONGS THAT ARE NOT THE CURRENT SONG, SINCE handleSongClick() CHANGES ICONS OF CURRENT SONGS ON CLICK
+    const isSameSong = this.state.currentSong === song;
+    const buttons = this.getButtons(index);
+    //IF HOVERING OVER A SONG THAT ISN'T PLAYING, CHANGE THE ICON TO A PLAY BUTTON
+    if (!isSameSong) {
+      this.showPlayBtn(buttons);
+    }
+  }
+
+  handleLeave(song, index) {
+    const isSameSong = this.state.currentSong === song;
+    const buttons = this.getButtons(index);
+    //WHEN LEAVING A SONG THAT ISN'T PLAYING, CHANGE THE ICON TO THE SONG INDEX
+    if (!isSameSong) {
+      this.showSongIndex(buttons);
     }
   }
 
@@ -64,8 +149,8 @@ class Album extends Component {
           <tbody>
             {
               this.state.album.songs.map( (song, index) =>
-                <tr className="song" key={index} onClick={() => this.handleSongClick(song)} >
-                  <td>{index + 1}</td>
+                <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.handleEnter(song, index)} onMouseLeave={() => this.handleLeave(song, index)} >
+                  <td><span className="songIndex" style={{display: 'inline'}}>{index + 1}</span><span className="playBtn" style={{display: 'none'}} ><i className="icon ion-md-play"></i></span><span className="pauseBtn" style={{display: 'none'}}><i className="icon ion-md-pause"></i></span></td>
                   <td>{song.title}</td>
                   <td>{song.duration}</td>
                 </tr>
@@ -73,6 +158,12 @@ class Album extends Component {
             }
           </tbody>
         </table>
+        <PlayerBar
+          isPlaying={this.state.isPlaying}
+          currentSong={this.state.currentSong}
+          handleSongClick={() => this.handleSongClick(this.state.currentSong)}
+          handlePrevClick={() => this.handlePrevClick()}
+        />
       </section>
     );
   }
