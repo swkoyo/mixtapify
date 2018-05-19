@@ -12,7 +12,7 @@ class Album extends Component {
 
     this.state = {
       album: album,
-      currentSong: [],
+      currentSong: {},
       isPlaying: false
     };
 
@@ -33,6 +33,18 @@ class Album extends Component {
   setSong(song) {
     this.audioElement.src = song.audioSrc;
     this.setState({ currentSong: song });
+  }
+
+  setRestToSongIndex(song) {
+    this.state.album.songs.map(songInArr => {
+      if (songInArr !== song) {
+        this.showSongIndex(this.getButtons(this.state.album.songs.indexOf(songInArr)));
+      }
+    });
+  }
+
+  getIndexOfSong(song) {
+    return this.state.album.songs.indexOf(song);
   }
 
   getButtons(index) {
@@ -63,17 +75,36 @@ class Album extends Component {
   }
 
   handlePrevClick() {
-    const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
+    const currentIndex = this.getIndexOfSong(this.state.currentSong);
+    //DO NOTHING IF THERE ARE NO MORE PREVIOUS SONGS
+    if (currentIndex === 0) {
+      return;
+    }
     const newIndex = Math.max(0, currentIndex - 1);
     const newSong = this.state.album.songs[newIndex];
     this.setSong(newSong);
 
     //CHANGE ALL OTHER SONG ICONS TO SONG INDEX
-    this.state.album.songs.map(songInArr => {
-      if (songInArr !== newSong) {
-        this.showSongIndex(this.getButtons(this.state.album.songs.indexOf(songInArr)));
-      }
-    });
+    this.setRestToSongIndex(newSong);
+
+    // CHANGE ICON OF NEW SONG TO PAUSE BUTTON
+    this.showPauseBtn(this.getButtons(newIndex));
+
+    this.play();
+  }
+
+  handleNextClick() {
+    const currentIndex = this.getIndexOfSong(this.state.currentSong);
+    //DO NOTHING IF CURRENT SONG IS LAST SONG
+    if (currentIndex === 4) {
+      return;
+    }
+    const newIndex = Math.min(4, currentIndex + 1);
+    const newSong = this.state.album.songs[newIndex];
+    this.setSong(newSong);
+
+    //CHANGE ALL OTHER SONG ICONS TO SONG INDEX
+    this.setRestToSongIndex(newSong);
 
     // CHANGE ICON OF NEW SONG TO PAUSE BUTTON
     this.showPauseBtn(this.getButtons(newIndex));
@@ -83,7 +114,7 @@ class Album extends Component {
 
   handleSongClick(song) {
     const isSameSong = this.state.currentSong === song;
-    const currentIndex = this.state.album.songs.indexOf(song);
+    const currentIndex = this.getIndexOfSong(song)
     const buttons = this.getButtons(currentIndex);
 
     if (isSameSong) {
@@ -98,11 +129,7 @@ class Album extends Component {
       this.setSong(song); //SET CURRENT SONG TO NEW, CLICKED SONG
 
       //CHANGE ALL OTHER SONG ICONS TO SONG INDEX
-      this.state.album.songs.map(songInArr => {
-        if (songInArr !== song) {
-          this.showSongIndex(this.getButtons(this.state.album.songs.indexOf(songInArr)));
-        }
-      });
+      this.setRestToSongIndex(song);
 
       // CHANGE ICON OF THE CLICKED, NEW CURRENT SONG TO PAUSE BUTTON
       this.showPauseBtn(buttons);
@@ -163,6 +190,7 @@ class Album extends Component {
           currentSong={this.state.currentSong}
           handleSongClick={() => this.handleSongClick(this.state.currentSong)}
           handlePrevClick={() => this.handlePrevClick()}
+          handleNextClick={() => this.handleNextClick()}
         />
       </section>
     );
