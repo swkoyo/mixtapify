@@ -71,6 +71,11 @@ class Album extends Component {
   }
 
   formatTime(time) {
+    // CHECK TO SEE IF TIME IS A NUMBER
+    if (isNaN(time)) {
+      return "-:--";
+    }
+
     const minutes = Math.trunc(time / 60);
     let seconds = (time / 60) - Math.trunc(time / 60);
     seconds = Math.trunc(seconds * 60);
