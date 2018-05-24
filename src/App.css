@@ -22,6 +22,78 @@
   font-size: large;
 }
 
+.navbar {
+  background: black;
+  overflow: auto;
+  padding-top: 15px;
+  padding-bottom: 8px;
+}
+
+#logo {
+  color: white;
+  font-size: 30px;
+}
+
+a:-webkit-any-link {
+  color: white;
+}
+.navbar li {
+  float:left;
+  position: relative;
+  top: 40px;
+  transform: translateY(-50%);
+}
+
+.navbar li a {
+  display:block;
+  text-align:center;
+  width: auto; /* fixed width */
+  text-decoration:none;
+}
+
+.navbar li a:hover {
+  color: #eb4385;
+}
+
+.navbar ul {
+  width:auto;
+  margin:0 auto;
+  list-style:none;
+}
+
+#navbar-links {
+  float: right;
+  width: auto;
+  white-space:nowrap;
+}
+
+#navbar-links li {
+  display: inline;
+  width: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+li hr {
+  height: 20px;
+  width: 0;
+  border: .5px solid white;
+  background: white;
+  margin-left: 50%;
+}
+
+.logo-photo {
+  filter: brightness(0) invert(1);
+}
+
+.logo-photo:hover {
+  filter: brightness(1) invert(0);
+}
+
+.header {
+  height: 105px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
