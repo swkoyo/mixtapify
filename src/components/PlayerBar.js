@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './playerBar.css';
 
 class PlayerBar extends Component {
   render() {
@@ -19,7 +20,7 @@ class PlayerBar extends Component {
           <div className="current-time">{this.props.formatTime(this.props.currentTime)}</div>
           <input
             type="range"
-            className="seek-bar"
+            className="time-seek-bar"
             value={(this.props.currentTime / this.props.duration) || 0}
             max="1"
             min="0"
@@ -32,7 +33,7 @@ class PlayerBar extends Component {
           <div className="icon ion-md-volume-low"></div>
           <input
             type="range"
-            className="seek-bar"
+            className="volume-seek-bar"
             value={this.props.volume}
             max="1"
             min="0"

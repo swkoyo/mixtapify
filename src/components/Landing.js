@@ -14,7 +14,7 @@ const Landing = () => (
       <Link className="mainLibraryLink" to='/library'>Browse Our Selection!</Link>
     </section>
     <section className="selling-points">
-      <h1>Spotify gives you instant access to millions of songs – from old favorites to the latest hits. Just hit play to stream anything you like.</h1>
+      <h1>Bloc Jams gives you instant access to millions of songs – from old favorites to the latest hits. Just hit play to stream anything you like.</h1>
       <div className="points">
         <div className="point">
           <img src="/assets/images/selection.png" alt="Music Selection" />
