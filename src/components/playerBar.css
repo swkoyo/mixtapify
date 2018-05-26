@@ -1,0 +1,81 @@
+.player-bar {
+  background: black;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+#buttons {
+  float: left;
+  display: inline-block;
+}
+
+#time-control {
+  display: inline-block;
+  padding-top: 10px;
+  margin-left: -20px;
+}
+
+#volume-control {
+  display: inline-block;
+  float: right;
+  padding-top: 16px;
+  padding-right: 30px;
+}
+
+#buttons button {
+  font-size: 45px;
+  width: 45px;
+  margin: 0 10px;
+  background: black;
+  border: none;
+  color: white;
+ }
+
+#buttons button:focus {
+  outline: none;
+}
+
+#buttons button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.time-seek-bar {
+  width: 350px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.volume-seek-bar {
+  width: 65%;
+  margin-top: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.current-time {
+  float: left;
+  font-size: 30px;
+  color: white;
+}
+
+.total-time {
+  float: right;
+  font-size: 30px;
+  color: white;
+}
+
+.ion-md-volume-low {
+  float: left;
+  font-size: 20px;
+  color: white;
+}
+
+.ion-md-volume-high {
+  float: right;
+  font-size: 20px;
+  color: white;
+}

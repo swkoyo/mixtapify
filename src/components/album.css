@@ -1,0 +1,27 @@
+.album {
+  margin-bottom: 75px;
+}
+
+#album-title {
+  font-size: 2em;
+}
+
+.artist {
+  font-size: 3em;
+}
+
+#release-info {
+  font-size: 1em;
+}
+
+#song-list {
+  margin-top: 20px;
+  margin-left: 42%;
+}
+
+.song-title {
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-left: 1px solid black;
+}
