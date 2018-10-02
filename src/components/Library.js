@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import albumData from './../data/albums';
+import { Grid, Image, Header, Divider } from 'semantic-ui-react';
 import './library.css';
 
 class Library extends Component {
@@ -12,20 +13,37 @@ class Library extends Component {
   render() {
     return (
       <section className='library'>
-        {
-          this.state.albums.map( (album, index) =>
-              <div className="album-library">
-                <Link to={`/album/${album.slug}`} key={index}>
-                  <img className="album-photo" src={album.albumCover} alt={album.title} />
-                  <div className="album-description">
-                    <div className="title">{album.title}</div>
-                    <div className="artist">{album.artist}</div>
-                    <div className="length">{album.songs.length} songs</div>
-                  </div>
-                </Link>
-              </div>
-          )
-        }
+        <Grid container columns={4}>
+          {
+            this.state.albums.map( (album, index) =>
+              <Grid.Column>
+                <div className="album-library">
+                  <Link to={`/album/${album.slug}`} key={index}>
+                    <Image
+                      className="album-image"
+                      src={album.albumCover} 
+                      alt={album.title}
+                      size='medium'
+                      target='_blank'
+                      rounded
+                    />
+                  </Link>
+                  <Header as='h2' className="album-description">
+                    <Link to={`/album/${album.slug}`} key={index}>
+                      <div className="title">{album.title}</div>
+                    </Link>
+                    <Divider />
+                    <Header.Subheader>
+                      {album.artist}
+                      <br></br>
+                      {album.songs.length} songs
+                    </Header.Subheader>
+                  </Header>
+                </div>
+              </Grid.Column>
+            )
+          }
+        </Grid>
         <footer className="landing-footer">
           <Link to='/'><img className="logo-photo" src="/assets/images/bloc_jams_logo.png" alt="Bloc Jams Logo"></img></Link>
           <a href="#"><i className="fab fa-facebook-square"></i></a>

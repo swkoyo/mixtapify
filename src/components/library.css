@@ -22,28 +22,12 @@
   color: #eb4385;
 }
 
-.library {
-  /* background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAYklEQVQYVwFXAKj/AeIqa/8EBgIAAf8BAAYLEQD+CAgABQoKAP/9+AAB5i9z/wQGAAD+/v0ABgsNAAEZGOkABwXd/uTiOgHmNHj7AwT9BP75/QAGCgoAAiEgsv759REA7O49sNwfGjaE9g4AAAAASUVORK5CYII=");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
-}
-
-.album-description {
-  margin-top: -58px;
-  width: 560px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.album-library {
-  width: 560px;
-  margin: 0 auto;
-  opacity: 0.5;
-}
-
-.album-library:hover {
-  opacity: 1;
+.album-image:hover {
+  transition: opacity 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  -mox-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  opacity: 0.6;
 }
 
 .album-library a {

@@ -17,6 +17,9 @@ class App extends Component {
               </li>
               <ul id="navbar-links">
                 <li>
+                <Link className="homeLink" to='/'>Home</Link>
+                </li>
+                <li>
                   <Link className="libraryLink" to='/library'>Library</Link>
                 </li>
                 <li><hr></hr></li>
