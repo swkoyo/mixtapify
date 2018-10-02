@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
+import { Button } from 'semantic-ui-react';
+import { Input } from 'semantic-ui-react';
 import './landing.css';
 
 const Landing = () => (
@@ -8,8 +10,8 @@ const Landing = () => (
       <h1>Welcome to Bloc Jams!</h1>
       <h4>Sign-up for a new account</h4>
       <form>
-        <input className="email" type="email" placeholder="Enter email address"></input>
-        <input className="submit" type="submit" value="Submit"></input>
+        <Input className="email" type="email" placeholder="Enter email address" />
+        <Button>Click Here</Button>
       </form>
       <Link className="mainLibraryLink" to='/library'>Browse Our Selection!</Link>
     </section>
