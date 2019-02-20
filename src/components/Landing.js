@@ -59,8 +59,8 @@ const Landing = () => (
     <Container>
       <Grid columns={3}>
         <Grid.Row>
-          <Grid.Column centered>
-            <Card>
+          <Grid.Column>
+            <Card fluid>
               <Image src="/assets/images/selection.png" alt="Music Selection" />
               <Card.Content>
                 <Card.Header>Choose your music</Card.Header>
@@ -68,8 +68,8 @@ const Landing = () => (
               </Card.Content>
             </Card>
           </Grid.Column>
-          <Grid.Column centered>
-            <Card>
+          <Grid.Column>
+            <Card fluid>
               <Image src="/assets/images/selection.png" alt="Music Selection" />
               <Card.Content>
                 <Card.Header>Choose your music</Card.Header>
@@ -77,8 +77,8 @@ const Landing = () => (
               </Card.Content>
             </Card>
           </Grid.Column>
-          <Grid.Column centered>
-            <Card>
+          <Grid.Column>
+            <Card fluid>
               <Image src="/assets/images/selection.png" alt="Music Selection" />
               <Card.Content>
                 <Card.Header>Choose your music</Card.Header>
