@@ -1,2 +1,2 @@
 import React, { Component } from 'react';
-import { Container, Grid, Menu } from 'semantic-ui-react';
+import { Button, Container, Grid, Menu } from 'semantic-ui-react';
