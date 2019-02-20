@@ -57,7 +57,7 @@ const Landing = () => (
       </Grid.Row>
     </Grid>
     <Container>
-      <Grid columns={3}>
+      <Grid columns={3} stretched>
         <Grid.Row>
           <Grid.Column>
             <Card fluid>
@@ -70,19 +70,19 @@ const Landing = () => (
           </Grid.Column>
           <Grid.Column>
             <Card fluid>
-              <Image src="/assets/images/selection.png" alt="Music Selection" />
+              <Image src="/assets/images/listening.png" alt="Music Streaming" />
               <Card.Content>
-                <Card.Header>Choose your music</Card.Header>
-                <Card.Description>The world is full of music; why should you have to listen to music that someone else chose?</Card.Description>
+                <Card.Header>Unlimited streaming, ad-free</Card.Header>
+                <Card.Description>No arbitrary limits. No distractions.</Card.Description>
               </Card.Content>
             </Card>
           </Grid.Column>
           <Grid.Column>
             <Card fluid>
-              <Image src="/assets/images/selection.png" alt="Music Selection" />
+              <Image src="/assets/images/mobile.png" alt="Mobile Music" />
               <Card.Content>
                 <Card.Header>Choose your music</Card.Header>
-                <Card.Description>The world is full of music; why should you have to listen to music that someone else chose?</Card.Description>
+                <Card.Description>Listen to your music on the go. This streaming service is avaliable on all mobile platforms.</Card.Description>
               </Card.Content>
             </Card>
           </Grid.Column>
