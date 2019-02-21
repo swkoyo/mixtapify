@@ -43,15 +43,33 @@ const Landing = () => (
     // </footer>
   // </section>
   <Fragment>
-    <Container fluid>
+    <Container
+      fluid
+      style={{
+        'background-image': 'url("/assets/images/background-image.jpeg")',
+        'background-position': 'center',
+        'background-repeat': 'no-repeat',
+        'background-size': 'cover',
+        'height': '40em',
+        'padding-top': '100px'
+      }}>
       <Grid columns={1}>
         <Grid.Row>
           <Grid.Column>
             <Header
               size='huge'
-              content='Welcome to Mixtapify'
+              content='Welcome to Mixtapify!'
               style={{
-                'font-size': '50px'
+                'font-size': '50px',
+                'color': 'white',
+              }}
+            />
+            <Header
+              as='h3'
+              content='Mixtapify gives you instant access to millions of songs – from old favorites to the latest hits. Just hit play to stream anything you like.'
+              style={{
+                'font-size': '20px',
+                'color': 'white',
               }}
             />
             {/* <Header as='h3'>Sign-up for a new account</Header>
@@ -59,14 +77,13 @@ const Landing = () => (
               <Input className="email" type="email" placeholder="Enter email address" />
               <Button>Click Here</Button>
             </form> */}
-            <Link className="mainLibraryLink" to='/library'>Browse Our Selection!</Link>
+            <Button circular color='teal' as={Link} to='/library'>Browse Our Selection!</Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>
     </Container>
     <Container style={{'padding-bottom': '100px'}}>
       <Grid columns={3} stretched>
-        <Header as='h3'>Mixtapify gives you instant access to millions of songs – from old favorites to the latest hits. Just hit play to stream anything you like.</Header>
         <Grid.Row>
           <Grid.Column>
             <Card fluid>
