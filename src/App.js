@@ -4,13 +4,15 @@ import './App.css';
 import Landing from './components/Landing';
 import Library from './components/Library';
 import Album from './components/Album';
+import Navbar from './components/Navbar';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="header">
-          <nav className="navbar">
+          <Navbar />
+          {/* <nav className="navbar">
             <ul>
               <li>
                 <span id="logo"><Link to='/'><img className="logo-photo" src="/assets/images/bloc_jams_logo.png" alt="Bloc Jams Logo"></img></Link></span>
@@ -31,7 +33,7 @@ class App extends Component {
                 </li>
               </ul>
             </ul>
-          </nav>
+          </nav> */}
         </header>
         <main>
           <Route exact path="/" component={Landing} />
