@@ -51,7 +51,7 @@ const Landing = () => (
         'background-repeat': 'no-repeat',
         'background-size': 'cover',
         'height': '40em',
-        'padding-top': '100px'
+        'padding-top': '100px',
       }}>
       <Grid columns={1}>
         <Grid.Row>
@@ -64,29 +64,41 @@ const Landing = () => (
                 'color': 'white',
               }}
             />
-            <Header
-              as='h3'
-              content='Mixtapify gives you instant access to millions of songs – from old favorites to the latest hits. Just hit play to stream anything you like.'
-              style={{
-                'font-size': '20px',
-                'color': 'white',
-              }}
-            />
             {/* <Header as='h3'>Sign-up for a new account</Header>
             <form>
               <Input className="email" type="email" placeholder="Enter email address" />
               <Button>Click Here</Button>
             </form> */}
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column>
             <Button circular color='teal' as={Link} to='/library'>Browse Our Selection!</Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>
     </Container>
-    <Container style={{'padding-bottom': '100px'}}>
+    <Container style={{
+      'padding-bottom': '100px',
+      'padding-top': '50px'
+    }}>
       <Grid columns={3} stretched>
         <Grid.Row>
+          <Header
+            as='h3'
+            centered
+            content='Mixtapify gives you instant access to millions of songs – from old favorites to the latest hits. Just hit play to stream anything you like.'
+            style={{
+              'font-size': '20px',
+              'height': '50px'
+            }}
+          />
+        </Grid.Row>
+        <Grid.Row>
           <Grid.Column>
-            <Card fluid>
+            <Card fluid style={{
+              'border': 'none'
+            }}>
               <Image style={{'height': '300px'}} src="/assets/images/selection.png" alt="Music Selection" />
               <Card.Content>
                 <Card.Header>Choose your music</Card.Header>
