@@ -71,7 +71,7 @@ const Landing = () => (
             </form> */}
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row>
+        <Grid.Row style={{'margin-top': '75px'}}>
           <Grid.Column>
             <Button circular color='teal' as={Link} to='/library'>Browse Our Selection!</Button>
           </Grid.Column>
