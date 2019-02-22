@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { Visibility, Container, Menu, Segment, Button } from 'semantic-ui-react';
+import { Header, Container, Menu, Segment, Button } from 'semantic-ui-react';
 
 const Navbar = () => {
     return (
@@ -17,6 +17,9 @@ const Navbar = () => {
             >
                 <Container>
                     <Menu.Item>
+                        Mixtapify
+                    </Menu.Item>
+                    <Menu.Item>
                         <Button as={Link} to='/' inverted>
                             Home
                         </Button>
@@ -26,16 +29,6 @@ const Navbar = () => {
                             Library
                         </Button>
                     </Menu.Item>
-                    {/* <Menu.Item as='a'>Company</Menu.Item>
-                    <Menu.Item as='a'>Careers</Menu.Item>
-                    <Menu.Item position='right'>
-                        <Button as='a'>
-                            Log in
-                        </Button>
-                        <Button as='a' style={{ marginLeft: '0.5em' }}>
-                            Sign Up
-                        </Button>
-                    </Menu.Item> */}
                 </Container>
             </Menu>
         </Segment>
