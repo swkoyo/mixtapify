@@ -18,16 +18,16 @@ class Library extends Component {
             size='huge'
             content='Our Selection'
             style={{
-              'font-size': '50px',
+              'fontSize': '50px',
               'color': 'black',
-              'margin-bottom': '50px'
+              'marginBottom': '50px'
             }}
           />
           <Grid columns={4}>
             {
               this.state.albums.map( (album, index) =>
-                <Grid.Column>
-                  <Card key={index}>
+                <Grid.Column key={index}>
+                  <Card>
                     <Image
                       className='album-image'
                       src={album.albumCover}

@@ -16,12 +16,12 @@ const Navbar = () => {
                 inverted
             >
                 <Container>
-                    <Menu.Item as='a'>
+                    <Menu.Item>
                         <Button as={Link} to='/' inverted>
                             Home
                         </Button>
                     </Menu.Item>
-                    <Menu.Item as='a'>
+                    <Menu.Item>
                         <Button as={Link} to='/library' inverted>
                             Library
                         </Button>
