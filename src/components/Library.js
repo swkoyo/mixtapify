@@ -14,12 +14,22 @@ class Library extends Component {
     return (
       <Fragment>
         <Container className='library'>
+          <Header
+            size='huge'
+            content='Our Selection'
+            style={{
+              'font-size': '50px',
+              'color': 'black',
+              'margin-bottom': '50px'
+            }}
+          />
           <Grid columns={4}>
             {
               this.state.albums.map( (album, index) =>
                 <Grid.Column>
                   <Card key={index}>
                     <Image
+                      className='album-image'
                       src={album.albumCover}
                       alt={album.title}
                       as={Link}
@@ -37,32 +47,7 @@ class Library extends Component {
                       </Card.Meta>
                       <Card.Description>{album.songs.length} songs</Card.Description>
                     </Card.Content>
-                    {/* <Card.Content extra>
-                    </Card.Content> */}
                   </Card>
-                  {/* <div className="album-library">
-                    <Link to={`/album/${album.slug}`} key={index}>
-                      <Image
-                        className="album-image"
-                        src={album.albumCover}
-                        alt={album.title}
-                        size='medium'
-                        target='_blank'
-                        rounded
-                      />
-                    </Link>
-                    <Header as='h2' className="album-description">
-                      <Link to={`/album/${album.slug}`} key={index}>
-                        <div className="title">{album.title}</div>
-                      </Link>
-                      <Divider />
-                      <Header.Subheader>
-                        {album.artist}
-                        <br></br>
-                        {album.songs.length} songs
-                      </Header.Subheader>
-                    </Header>
-                  </div> */}
                 </Grid.Column>
               )
             }
