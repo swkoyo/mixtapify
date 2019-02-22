@@ -8,12 +8,12 @@ const Landing = () => (
     <Container
       fluid
       style={{
-        'background-image': 'url("/assets/images/background-image.jpeg")',
-        'background-position': 'center',
-        'background-repeat': 'no-repeat',
-        'background-size': 'cover',
+        'backgroundImage': 'url("/assets/images/background-image.jpeg")',
+        'backgroundPosition': 'center',
+        'backgroundRepeat': 'no-repeat',
+        'backgroundSize': 'cover',
         'height': '40em',
-        'padding-top': '100px',
+        'paddingTop': '100px',
       }}>
       <Grid columns={1}>
         <Grid.Row>
@@ -22,7 +22,7 @@ const Landing = () => (
               size='huge'
               content='Welcome to Mixtapify!'
               style={{
-                'font-size': '50px',
+                'fontSize': '50px',
                 'color': 'white',
               }}
             />
@@ -33,7 +33,7 @@ const Landing = () => (
             </form> */}
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row style={{'margin-top': '75px'}}>
+        <Grid.Row style={{'marginTop': '75px'}}>
           <Grid.Column>
             <Button circular color='teal' as={Link} to='/library'>Browse Our Selection!</Button>
           </Grid.Column>
@@ -41,17 +41,16 @@ const Landing = () => (
       </Grid>
     </Container>
     <Container style={{
-      'padding-bottom': '100px',
-      'padding-top': '50px'
+      'paddingBottom': '100px',
+      'paddingTop': '50px'
     }}>
       <Grid columns={3} stretched>
         <Grid.Row>
           <Header
             as='h3'
-            centered
             content='Mixtapify gives you instant access to millions of songs – from old favorites to the latest hits. Just hit play to stream anything you like.'
             style={{
-              'font-size': '20px',
+              'fontSize': '20px',
               'height': '50px'
             }}
           />
