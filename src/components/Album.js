@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
 import './album.css';
+import { Container, Button, Grid, Image, Header } from 'semantic-ui-react';
 
 class Album extends Component {
   constructor(props) {
@@ -212,47 +213,59 @@ class Album extends Component {
 
   render() {
     return (
-      <section className="album">
-        <section id="album-info">
-          <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title}/>
-          <div className="album-details">
-            <h1 id="album-title">{this.state.album.title}</h1>
-            <h2 className="artist">{this.state.album.artist}</h2>
-            <div id="release-info">{this.state.album.releaseInfo}</div>
-          </div>
-        </section>
-        <table id="song-list">
-          <colgroup>
-            <col id="song-number-column" />
-            <col id="song-title-column" />
-            <col id="song-duration-column" />
-          </colgroup>
-          <tbody>
-            {
-              this.state.album.songs.map( (song, index) =>
-                <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.handleEnter(song, index)} onMouseLeave={() => this.handleLeave(song, index)} >
-                  <td><span className="songIndex" style={{display: 'inline'}}>{index + 1}</span><span className="playBtn" style={{display: 'none'}} ><i className="icon ion-md-play"></i></span><span className="pauseBtn" style={{display: 'none'}}><i className="icon ion-md-pause"></i></span></td>
-                  <td className="song-title">{song.title}</td>
-                  <td>{this.formatTime(song.duration)}</td>
-                </tr>
-              )
-            }
-          </tbody>
-        </table>
-        <PlayerBar
-          isPlaying={this.state.isPlaying}
-          currentSong={this.state.currentSong}
-          currentTime={this.audioElement.currentTime}
-          duration={this.audioElement.duration}
-          volume={this.audioElement.volume}
-          handleSongClick={() => this.handleSongClick(this.state.currentSong)}
-          handlePrevClick={() => this.handlePrevClick()}
-          handleNextClick={() => this.handleNextClick()}
-          handleTimeChange={(e) => this.handleTimeChange(e)}
-          handleVolumeChange={(e) => this.handleVolumeChange(e)}
-          formatTime={(time) => this.formatTime(time)}
-        />
-      </section>
+      // <section className="album">
+      //   <section id="album-info">
+      //     <img id="album-cover-art" src={this.state.album.albumCover} alt={this.state.album.title}/>
+      //     <div className="album-details">
+      //       <h1 id="album-title">{this.state.album.title}</h1>
+      //       <h2 className="artist">{this.state.album.artist}</h2>
+      //       <div id="release-info">{this.state.album.releaseInfo}</div>
+      //     </div>
+      //   </section>
+      //   <table id="song-list">
+      //     <colgroup>
+      //       <col id="song-number-column" />
+      //       <col id="song-title-column" />
+      //       <col id="song-duration-column" />
+      //     </colgroup>
+      //     <tbody>
+      //       {
+      //         this.state.album.songs.map( (song, index) =>
+      //           <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.handleEnter(song, index)} onMouseLeave={() => this.handleLeave(song, index)} >
+      //             <td><span className="songIndex" style={{display: 'inline'}}>{index + 1}</span><span className="playBtn" style={{display: 'none'}} ><i className="icon ion-md-play"></i></span><span className="pauseBtn" style={{display: 'none'}}><i className="icon ion-md-pause"></i></span></td>
+      //             <td className="song-title">{song.title}</td>
+      //             <td>{this.formatTime(song.duration)}</td>
+      //           </tr>
+      //         )
+      //       }
+      //     </tbody>
+      //   </table>
+      //   <PlayerBar
+      //     isPlaying={this.state.isPlaying}
+      //     currentSong={this.state.currentSong}
+      //     currentTime={this.audioElement.currentTime}
+      //     duration={this.audioElement.duration}
+      //     volume={this.audioElement.volume}
+      //     handleSongClick={() => this.handleSongClick(this.state.currentSong)}
+      //     handlePrevClick={() => this.handlePrevClick()}
+      //     handleNextClick={() => this.handleNextClick()}
+      //     handleTimeChange={(e) => this.handleTimeChange(e)}
+      //     handleVolumeChange={(e) => this.handleVolumeChange(e)}
+      //     formatTime={(time) => this.formatTime(time)}
+      //   />
+      // </section>
+      <Fragment>
+        <Container className='album'>
+          <Grid columns={2}>
+            <Grid.Column>
+              Image
+            </Grid.Column>
+            <Grid.Column>
+              List
+            </Grid.Column>
+          </Grid>
+        </Container>
+      </Fragment>
     );
   }
 }
