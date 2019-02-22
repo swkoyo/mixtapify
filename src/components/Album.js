@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
 import './album.css';
-import { Container, Button, Grid, Image, Header } from 'semantic-ui-react';
+import { Container, Button, Grid, Image, Header, Table } from 'semantic-ui-react';
 
 class Album extends Component {
   constructor(props) {
@@ -240,31 +240,124 @@ class Album extends Component {
       //       }
       //     </tbody>
       //   </table>
-      //   <PlayerBar
-      //     isPlaying={this.state.isPlaying}
-      //     currentSong={this.state.currentSong}
-      //     currentTime={this.audioElement.currentTime}
-      //     duration={this.audioElement.duration}
-      //     volume={this.audioElement.volume}
-      //     handleSongClick={() => this.handleSongClick(this.state.currentSong)}
-      //     handlePrevClick={() => this.handlePrevClick()}
-      //     handleNextClick={() => this.handleNextClick()}
-      //     handleTimeChange={(e) => this.handleTimeChange(e)}
-      //     handleVolumeChange={(e) => this.handleVolumeChange(e)}
-      //     formatTime={(time) => this.formatTime(time)}
-      //   />
+        // <PlayerBar
+        //   isPlaying={this.state.isPlaying}
+        //   currentSong={this.state.currentSong}
+        //   currentTime={this.audioElement.currentTime}
+        //   duration={this.audioElement.duration}
+        //   volume={this.audioElement.volume}
+        //   handleSongClick={() => this.handleSongClick(this.state.currentSong)}
+        //   handlePrevClick={() => this.handlePrevClick()}
+        //   handleNextClick={() => this.handleNextClick()}
+        //   handleTimeChange={(e) => this.handleTimeChange(e)}
+        //   handleVolumeChange={(e) => this.handleVolumeChange(e)}
+        //   formatTime={(time) => this.formatTime(time)}
+        // />
       // </section>
       <Fragment>
         <Container className='album'>
           <Grid columns={2}>
             <Grid.Column>
-              Image
+              <Image
+                rounded
+                src={this.state.album.albumCover}
+                alt={this.state.album.title}
+              />
             </Grid.Column>
             <Grid.Column>
-              List
+              {/* <Header
+                as='h1'
+                style={{
+                  'fontSize': '50px',
+                  'textAlign': 'left',
+                  'marginBottom': '10px'
+                }}
+              >{this.state.album.title}</Header>
+              <Header
+                as='h3'
+                style={{
+                  'fontSize': '30px',
+                  'textAlign': 'left',
+                  'marginBottom': '10px'
+                }}
+              >{this.state.album.artist}</Header>
+              <Header
+                as='h5'
+                style={{
+                  'fontSize': '20px',
+                  'textAlign': 'left',
+                  'marginBottom': '10px'
+                }}
+              >{this.state.album.releaseInfo}</Header> */}
+              <Grid.Row
+                style={{
+                  'marginBottom': '100px'
+                }}
+              >
+                <Header
+                  as='h1'
+                  style={{
+                    'fontSize': '50px',
+                    'textAlign': 'left',
+                  }}
+                >
+                  <Header.Content>
+                    {this.state.album.title}
+                  </Header.Content>
+                  <Header.Subheader>
+                    <div>{this.state.album.artist}</div>
+                    <div>{this.state.album.releaseInfo}</div>
+                  </Header.Subheader>
+                </Header>
+              </Grid.Row>
+              <Grid.Row>
+              <Table singleLine>
+                <Table.Header>
+                  <Table.Row>
+                    <Table.HeaderCell>Name</Table.HeaderCell>
+                    <Table.HeaderCell>Registration Date</Table.HeaderCell>
+                    <Table.HeaderCell>E-mail address</Table.HeaderCell>
+                    <Table.HeaderCell>Premium Plan</Table.HeaderCell>
+                  </Table.Row>
+                </Table.Header>
+                <Table.Body>
+                  <Table.Row>
+                    <Table.Cell>John Lilki</Table.Cell>
+                    <Table.Cell>September 14, 2013</Table.Cell>
+                    <Table.Cell>jhlilk22@yahoo.com</Table.Cell>
+                    <Table.Cell>No</Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>Jamie Harington</Table.Cell>
+                    <Table.Cell>January 11, 2014</Table.Cell>
+                    <Table.Cell>jamieharingonton@yahoo.com</Table.Cell>
+                    <Table.Cell>Yes</Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>Jill Lewis</Table.Cell>
+                    <Table.Cell>May 11, 2014</Table.Cell>
+                    <Table.Cell>jilsewris22@yahoo.com</Table.Cell>
+                    <Table.Cell>Yes</Table.Cell>
+                  </Table.Row>
+                </Table.Body>
+              </Table>
+              </Grid.Row>
             </Grid.Column>
           </Grid>
         </Container>
+        <PlayerBar
+          isPlaying={this.state.isPlaying}
+          currentSong={this.state.currentSong}
+          currentTime={this.audioElement.currentTime}
+          duration={this.audioElement.duration}
+          volume={this.audioElement.volume}
+          handleSongClick={() => this.handleSongClick(this.state.currentSong)}
+          handlePrevClick={() => this.handlePrevClick()}
+          handleNextClick={() => this.handleNextClick()}
+          handleTimeChange={(e) => this.handleTimeChange(e)}
+          handleVolumeChange={(e) => this.handleVolumeChange(e)}
+          formatTime={(time) => this.formatTime(time)}
+        />
       </Fragment>
     );
   }
