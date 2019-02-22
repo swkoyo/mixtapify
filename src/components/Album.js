@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
 import './album.css';
-import { Container, Button, Grid, Image, Header, Table } from 'semantic-ui-react';
+import { Container, Icon, Grid, Image, Header, Table } from 'semantic-ui-react';
 
 class Album extends Component {
   constructor(props) {
@@ -265,30 +265,6 @@ class Album extends Component {
               />
             </Grid.Column>
             <Grid.Column>
-              {/* <Header
-                as='h1'
-                style={{
-                  'fontSize': '50px',
-                  'textAlign': 'left',
-                  'marginBottom': '10px'
-                }}
-              >{this.state.album.title}</Header>
-              <Header
-                as='h3'
-                style={{
-                  'fontSize': '30px',
-                  'textAlign': 'left',
-                  'marginBottom': '10px'
-                }}
-              >{this.state.album.artist}</Header>
-              <Header
-                as='h5'
-                style={{
-                  'fontSize': '20px',
-                  'textAlign': 'left',
-                  'marginBottom': '10px'
-                }}
-              >{this.state.album.releaseInfo}</Header> */}
               <Grid.Row
                 style={{
                   'marginBottom': '100px'
@@ -310,7 +286,11 @@ class Album extends Component {
                   </Header.Subheader>
                 </Header>
               </Grid.Row>
-              <Grid.Row>
+              <Grid.Row
+                style={{
+                  'marginBottom': '100px'
+                }}
+              >
               <Table singleLine>
                 <Table.Header>
                   <Table.Row>
@@ -323,27 +303,12 @@ class Album extends Component {
                   {
                     this.state.album.songs.map( (song, index) =>
                       <Table.Row className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.handleEnter(song, index)} onMouseLeave={() => this.handleLeave(song, index)} >
-                        <Table.Cell><span className='songIndex' style={{display: 'inline'}}>{index + 1}</span><span className="playBtn" style={{display: 'none'}} ><i className="icon ion-md-play"></i></span><span className="pauseBtn" style={{display: 'none'}}><i className="icon ion-md-pause"></i></span></Table.Cell>
+                        <Table.Cell><span className='songIndex' style={{display: 'inline'}}>{index + 1}</span><Icon name='play' className="playBtn" style={{display: 'none'}}></Icon><Icon name='pause' className="pauseBtn" style={{display: 'none'}}></Icon></Table.Cell>
                         <Table.Cell>{song.title}</Table.Cell>
                         <Table.Cell>{this.formatTime(song.duration)}</Table.Cell>
                       </Table.Row>
                     )
                   }
-                  {/* <Table.Row>
-                    <Table.Cell>John Lilki</Table.Cell>
-                    <Table.Cell>September 14, 2013</Table.Cell>
-                    <Table.Cell>jhlilk22@yahoo.com</Table.Cell>
-                  </Table.Row>
-                  <Table.Row>
-                    <Table.Cell>Jamie Harington</Table.Cell>
-                    <Table.Cell>January 11, 2014</Table.Cell>
-                    <Table.Cell>jamieharingonton@yahoo.com</Table.Cell>
-                  </Table.Row>
-                  <Table.Row>
-                    <Table.Cell>Jill Lewis</Table.Cell>
-                    <Table.Cell>May 11, 2014</Table.Cell>
-                    <Table.Cell>jilsewris22@yahoo.com</Table.Cell>
-                  </Table.Row> */}
                 </Table.Body>
               </Table>
               </Grid.Row>
