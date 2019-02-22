@@ -12,28 +12,6 @@ class App extends Component {
       <div className="App">
         <header className="header">
           <Navbar />
-          {/* <nav className="navbar">
-            <ul>
-              <li>
-                <span id="logo"><Link to='/'><img className="logo-photo" src="/assets/images/bloc_jams_logo.png" alt="Bloc Jams Logo"></img></Link></span>
-              </li>
-              <ul id="navbar-links">
-                <li>
-                <Link className="homeLink" to='/'>Home</Link>
-                </li>
-                <li>
-                  <Link className="libraryLink" to='/library'>Library</Link>
-                </li>
-                <li><hr></hr></li>
-                <li>
-                  <Link className="signup" to="#">Sign-Up</Link>
-                </li>
-                <li>
-                  <Link className="login" to="#">Login</Link>
-                </li>
-              </ul>
-            </ul>
-          </nav> */}
         </header>
         <main>
           <Route exact path="/" component={Landing} />
