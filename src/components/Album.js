@@ -229,15 +229,15 @@ class Album extends Component {
       //       <col id="song-duration-column" />
       //     </colgroup>
       //     <tbody>
-      //       {
-      //         this.state.album.songs.map( (song, index) =>
-      //           <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.handleEnter(song, index)} onMouseLeave={() => this.handleLeave(song, index)} >
-      //             <td><span className="songIndex" style={{display: 'inline'}}>{index + 1}</span><span className="playBtn" style={{display: 'none'}} ><i className="icon ion-md-play"></i></span><span className="pauseBtn" style={{display: 'none'}}><i className="icon ion-md-pause"></i></span></td>
-      //             <td className="song-title">{song.title}</td>
-      //             <td>{this.formatTime(song.duration)}</td>
-      //           </tr>
-      //         )
-      //       }
+            // {
+            //   this.state.album.songs.map( (song, index) =>
+                // <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.handleEnter(song, index)} onMouseLeave={() => this.handleLeave(song, index)} >
+            //       <td><span className="songIndex" style={{display: 'inline'}}>{index + 1}</span><span className="playBtn" style={{display: 'none'}} ><i className="icon ion-md-play"></i></span><span className="pauseBtn" style={{display: 'none'}}><i className="icon ion-md-pause"></i></span></td>
+            //       <td className="song-title">{song.title}</td>
+            //       <td>{this.formatTime(song.duration)}</td>
+            //     </tr>
+            //   )
+            // }
       //     </tbody>
       //   </table>
         // <PlayerBar
@@ -314,31 +314,36 @@ class Album extends Component {
               <Table singleLine>
                 <Table.Header>
                   <Table.Row>
-                    <Table.HeaderCell>Name</Table.HeaderCell>
-                    <Table.HeaderCell>Registration Date</Table.HeaderCell>
-                    <Table.HeaderCell>E-mail address</Table.HeaderCell>
-                    <Table.HeaderCell>Premium Plan</Table.HeaderCell>
+                    <Table.HeaderCell>Track</Table.HeaderCell>
+                    <Table.HeaderCell>Title</Table.HeaderCell>
+                    <Table.HeaderCell>Length</Table.HeaderCell>
                   </Table.Row>
                 </Table.Header>
                 <Table.Body>
-                  <Table.Row>
+                  {
+                    this.state.album.songs.map( (song, index) =>
+                      <Table.Row className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.handleEnter(song, index)} onMouseLeave={() => this.handleLeave(song, index)} >
+                        <Table.Cell><span className='songIndex' style={{display: 'inline'}}>{index + 1}</span><span className="playBtn" style={{display: 'none'}} ><i className="icon ion-md-play"></i></span><span className="pauseBtn" style={{display: 'none'}}><i className="icon ion-md-pause"></i></span></Table.Cell>
+                        <Table.Cell>{song.title}</Table.Cell>
+                        <Table.Cell>{this.formatTime(song.duration)}</Table.Cell>
+                      </Table.Row>
+                    )
+                  }
+                  {/* <Table.Row>
                     <Table.Cell>John Lilki</Table.Cell>
                     <Table.Cell>September 14, 2013</Table.Cell>
                     <Table.Cell>jhlilk22@yahoo.com</Table.Cell>
-                    <Table.Cell>No</Table.Cell>
                   </Table.Row>
                   <Table.Row>
                     <Table.Cell>Jamie Harington</Table.Cell>
                     <Table.Cell>January 11, 2014</Table.Cell>
                     <Table.Cell>jamieharingonton@yahoo.com</Table.Cell>
-                    <Table.Cell>Yes</Table.Cell>
                   </Table.Row>
                   <Table.Row>
                     <Table.Cell>Jill Lewis</Table.Cell>
                     <Table.Cell>May 11, 2014</Table.Cell>
                     <Table.Cell>jilsewris22@yahoo.com</Table.Cell>
-                    <Table.Cell>Yes</Table.Cell>
-                  </Table.Row>
+                  </Table.Row> */}
                 </Table.Body>
               </Table>
               </Grid.Row>
