@@ -1,4 +1,4 @@
-.album {
+/* .album {
   margin-bottom: 75px;
 }
 
@@ -24,4 +24,8 @@
   padding-left: 10px;
   padding-right: 10px;
   border-left: 1px solid black;
+} */
+
+.album {
+  margin-top: 75px;
 }
