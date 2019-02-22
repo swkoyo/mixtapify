@@ -1,4 +1,4 @@
-.landing-footer {
+/* .landing-footer {
   background: black;
   float: left;
   width: 100%;
@@ -32,4 +32,9 @@
 
 .album-library a {
   text-decoration:none;
+} */
+
+
+.library {
+  margin-top: 100px;
 }
