@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Header, Container, Menu, Segment, Button, Icon } from 'semantic-ui-react';
+import { Header, Container, Menu, Segment, Button, Icon, MenuItem } from 'semantic-ui-react';
 import './playerBar.css';
 
 class PlayerBar extends Component {
@@ -46,7 +46,7 @@ class PlayerBar extends Component {
       // </section>
 
       <Fragment>
-        <section id="buttons">
+        {/* <section id="buttons">
           <button id="previous" onClick={this.props.handlePrevClick}>
             <span className="ion-md-skip-backward"></span>
           </button>
@@ -82,29 +82,62 @@ class PlayerBar extends Component {
             onChange={this.props.handleVolumeChange}
           />
           <div className="icon ion-md-volume-high"></div>
-        </section>
+        </section> */}
         <Menu
           fixed='bottom'
           size='large'
           inverted
+          fluid
         >
           <Container>
-              <Menu.Item
-                position='left'
-                onClick={this.props.handlePrevClick}
-              >
-                  Mixtapify
-              </Menu.Item>
-              <Menu.Item>
-                  <Button inverted>
-                      Home
-                  </Button>
-              </Menu.Item>
-              <Menu.Item>
-                  <Button inverted>
-                      Library
-                  </Button>
-              </Menu.Item>
+            <Menu.Item
+              onClick={this.props.handlePrevClick}
+            >
+              <Icon name='backward'></Icon>
+            </Menu.Item>
+            <Menu.Item
+              onClick={this.props.handleSongClick}
+            >
+              <Icon name='play'></Icon>
+            </Menu.Item>
+            <Menu.Item
+              onClick={this.props.handleNextClick}
+            >
+              <Icon name='forward'></Icon>
+            </Menu.Item>
+            <Menu.Item
+              centered
+              style={{
+                'margin': '0 auto'
+              }}
+            >
+              <div className="current-time">{this.props.formatTime(this.props.currentTime)}</div>
+              <input
+                type="range"
+                className="time-seek-bar"
+                value={(this.props.currentTime / this.props.duration) || 0}
+                max="1"
+                min="0"
+                step="0.01"
+                onChange={this.props.handleTimeChange}
+              />
+              <div className="total-time">{this.props.formatTime(this.props.duration)}</div>
+            </Menu.Item>
+            <Menu.Item
+              position='right'
+            >
+              <div className="icon ion-md-volume-low"></div>
+              <input
+                type="range"
+                className="volume-seek-bar"
+                value={this.props.volume}
+                max="1"
+                min="0"
+                step="0.1"
+                onChange={this.props.handleVolumeChange}
+              />
+              <div className="icon ion-md-volume-high"></div>
+            </Menu.Item>
           </Container>
         </Menu>
       </Fragment>
