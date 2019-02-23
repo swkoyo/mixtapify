@@ -58,13 +58,13 @@
 
 .current-time {
   float: left;
-  font-size: 30px;
+  font-size: 20px;
   color: white;
 }
 
 .total-time {
   float: right;
-  font-size: 30px;
+  font-size: 20px;
   color: white;
 }
 
