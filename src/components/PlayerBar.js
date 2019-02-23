@@ -98,7 +98,7 @@ class PlayerBar extends Component {
             <Menu.Item
               onClick={this.props.handleSongClick}
             >
-              <Icon name='play'></Icon>
+              <Icon name={this.props.isPlaying ? 'pause' : 'play'}></Icon>
             </Menu.Item>
             <Menu.Item
               onClick={this.props.handleNextClick}
