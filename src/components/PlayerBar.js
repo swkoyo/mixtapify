@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Header, Container, Menu, Segment, Button, Icon, MenuItem } from 'semantic-ui-react';
+import { Container, Menu, Icon } from 'semantic-ui-react';
 import './playerBar.css';
 
 class PlayerBar extends Component {
