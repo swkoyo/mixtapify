@@ -117,7 +117,7 @@ export default [{
     artist: 'A$AP Rocky',
     releaseInfo: '2011 Ishlab Music Studio',
     albumCover: '/assets/images/album_covers/liveloveasap.jpg',
-    slug: '1999',
+    slug: 'liveloveasap',
     songs: [
       { title: 'Palace', duration: '166', audioSrc: '/assets/music/liveloveasap/01.Palace.mp3' },
       { title: 'Peso', duration: '171', audioSrc: '/assets/music/liveloveasap/02.Peso.mp3' },
@@ -135,6 +135,33 @@ export default [{
       { title: 'Roll One Up', duration: '163', audioSrc: '/assets/music/liveloveasap/14-ASAP_Rocky-Roll_One_Up_Prod_By_DJ_Burn_One.mp3' },
       { title: 'Demons', duration: '184', audioSrc: '/assets/music/liveloveasap/15-ASAP_Rocky-Demons_Prod_By_Clams_Casino.mp3' },
       { title: 'Out Of This World', duration: '171', audioSrc: '/assets/music/liveloveasap/16-ASAP_Rocky-Out_Of_This_World_Prod_By_The_Olympicks.mp3' },
+    ]
+  }, {
+    title: 'BetterOffDEAD',
+    artist: 'Flatbush Zombies',
+    releaseInfo: '2013 ElectricKoolAde Records',
+    albumCover: '/assets/images/album_covers/betteroffdead.jpg',
+    slug: 'betteroffdead',
+    songs: [
+      { title: 'Amerikan Pie', duration: '269', audioSrc: '/assets/music/betteroffdead/01.AmerikkkanPie.mp3' },
+      { title: 'Nephilim', duration: '200', audioSrc: '/assets/music/betteroffdead/02.Nephilim.mp3' },
+      { title: 'Bliss', duration: '204', audioSrc: '/assets/music/betteroffdead/03.Bliss.mp3' },
+      { title: 'Mine', duration: '118', audioSrc: '/assets/music/betteroffdead/04.Minephuck.mp3' },
+      { title: 'G Tearz', duration: '258', audioSrc: '/assets/music/betteroffdead/05.GTearz.mp3' },
+      { title: 'Death', duration: '220', audioSrc: '/assets/music/betteroffdead/06.Death.mp3' },
+      { title: 'Death 2', duration: '89', audioSrc: '/assets/music/betteroffdead/07.Death2.mp3' },
+      { title: 'Regular and Complex', duration: '295', audioSrc: '/assets/music/betteroffdead/08.RegularandComplex.mp3' },
+      { title: 'Thugnificense', duration: '183', audioSrc: '/assets/music/betteroffdead/09.Thugnificense.mp3' },
+      { title: 'Club Soda Feat. Action Bronson', duration: '245', audioSrc: '/assets/music/betteroffdead/10.ClubSoda.mp3' },
+      { title: 'LiveFromHell', duration: '153', audioSrc: '/assets/music/betteroffdead/11.LiveFromHell.mp3' },
+      { title: 'Palm Trees', duration: '261', audioSrc: '/assets/music/betteroffdead/12.PalmTrees.mp3' },
+      { title: '222', duration: '276', audioSrc: '/assets/music/betteroffdead/13.222.mp3' },
+      { title: 'Parade Feat. Danny Brown', duration: '178', audioSrc: '/assets/music/betteroffdead/14.DrugParade.mp3' },
+      { title: 'TP4', duration: '165', audioSrc: '/assets/music/betteroffdead/15.TP4.mp3' },
+      { title: 'GOD Blessed The DEAD', duration: '137', audioSrc: '/assets/music/betteroffdead/16.GODBlessedtheDEAD.mp3' },
+      { title: 'MRAZ', duration: '294', audioSrc: '/assets/music/betteroffdead/17.MRAZ.mp3' },
+      { title: 'My Team, SUPREME', duration: '161', audioSrc: '/assets/music/betteroffdead/018.MyTeamSUPREME.mp3' },
+      { title: 'The Results Are In', duration: '260', audioSrc: '/assets/music/betteroffdead/19.TheResultsAreIn.mp3' },
     ]
   }
 ];
