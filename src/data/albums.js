@@ -71,7 +71,7 @@ export default [{
   }, {
     title: 'Acid Rap',
     artist: 'Chance the Rapper',
-    releaseInfo: 'Soundscape Studios',
+    releaseInfo: '2013 Soundscape Studios',
     albumCover: '/assets/images/album_covers/acidrap.jpg',
     slug: 'acid-rap',
     songs: [
@@ -89,10 +89,10 @@ export default [{
       { title: 'Chain Smoker', duration: '211', audioSrc: '/assets/music/acidrap/12.ChainSmoker.mp3' },
       { title: 'Everything\'s Good (Good Ass Outro)', duration: '333', audioSrc: '/assets/music/acidrap/13.EverythingsGood.mp3' }
     ]
-  },{
+  }, {
     title: '1999',
     artist: 'Joey BadA$$',
-    releaseInfo: 'Cinematic Music Group',
+    releaseInfo: '2012 Cinematic Music Group',
     albumCover: '/assets/images/album_covers/1999.jpg',
     slug: '1999',
     songs: [
@@ -111,6 +111,30 @@ export default [{
       { title: 'Righteous Minds', duration: '224', audioSrc: '/assets/music/1999/13.RighteousMinds.mp3' },
       { title: 'Where It At Feat. Kirk Knight', duration: '249', audioSrc: '/assets/music/1999/14.WhereItAt.mp3' },
       { title: 'Suspect Feat. PRO ERA', duration: '707', audioSrc: '/assets/music/1999/15.Suspect.mp3' },
+    ]
+  }, {
+    title: 'LiveLoveASAP',
+    artist: 'A$AP Rocky',
+    releaseInfo: '2011 Ishlab Music Studio',
+    albumCover: '/assets/images/album_covers/liveloveasap.jpg',
+    slug: '1999',
+    songs: [
+      { title: 'Palace', duration: '166', audioSrc: '/assets/music/liveloveasap/01.Palace.mp3' },
+      { title: 'Peso', duration: '171', audioSrc: '/assets/music/liveloveasap/02.Peso.mp3' },
+      { title: 'Bass', duration: '201', audioSrc: '/assets/music/liveloveasap/03.Bass.mp3' },
+      { title: 'Wassup', duration: '161', audioSrc: '/assets/music/liveloveasap/04.Wassup.mp3' },
+      { title: 'Brand New Guy Feat. Schoolboy Q', duration: '291', audioSrc: '/assets/music/liveloveasap/05.BrandNewGuy.mp3' },
+      { title: 'Purple Swag: Chapter 2 Feat. Spaceghost Purrp & A$AP Nast', duration: '170', audioSrc: '/assets/music/liveloveasap/06.PurpleSwag.mp3' },
+      { title: 'Get Lit Feat. Fat Tony', duration: '182', audioSrc: '/assets/music/liveloveasap/07-ASAP_Rocky-Get_Lit_Feat_Fat_Tony_Prod_By_Soufein3000.mp3' },
+      { title: 'Trilla Feat. A$AP Twelvy & A$AP Nast', duration: '248', audioSrc: '/assets/music/liveloveasap/08-ASAP_Rocky-Trilla_Feat_ASAP_Twelvy_ASAP_Nast_Prod_By_Beautiful_Lou.mp3' },
+      { title: 'Keep It G Feat. Chance Infinite & Spaceghost Purrp', duration: '233', audioSrc: '/assets/music/liveloveasap/09-ASAP_Rocky-Keep_It_G_Feat_Chace_Infinite_Spaceghost_Purrp_Prod_By_Spaceghost_Purrp.mp3' },
+      { title: 'Kissin\' Pink Feat. A$AP Ferg', duration: '215', audioSrc: '/assets/music/liveloveasap/10-ASAP_Rocky-Kissin_Pink_Feat_ASAP_Ferg_Prod_By_Beautiful_Lou.mp3' },
+      { title: 'Houston Old Head', duration: '262', audioSrc: '/assets/music/liveloveasap/11-ASAP_Rocky-Houston_Old_Head_Prod_By_DJ_Burn_One.mp3' },
+      { title: 'Acid Drip', duration: '167', audioSrc: '/assets/music/liveloveasap/12-ASAP_Rocky-Acid_Drip_Prod_By_Soufein3000.mp3' },
+      { title: 'Leaf Feat. Main Attrakionz', duration: '295', audioSrc: '/assets/music/liveloveasap/13-ASAP_Rocky-Leaf_Feat_Main_Attrakionz_Prod_By_Clams_Casino.mp3' },
+      { title: 'Roll One Up', duration: '163', audioSrc: '/assets/music/liveloveasap/14-ASAP_Rocky-Roll_One_Up_Prod_By_DJ_Burn_One.mp3' },
+      { title: 'Demons', duration: '184', audioSrc: '/assets/music/liveloveasap/15-ASAP_Rocky-Demons_Prod_By_Clams_Casino.mp3' },
+      { title: 'Out Of This World', duration: '171', audioSrc: '/assets/music/liveloveasap/16-ASAP_Rocky-Out_Of_This_World_Prod_By_The_Olympicks.mp3' },
     ]
   }
 ];
