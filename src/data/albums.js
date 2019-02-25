@@ -89,5 +89,28 @@ export default [{
       { title: 'Chain Smoker', duration: '211', audioSrc: '/assets/music/acidrap/12.ChainSmoker.mp3' },
       { title: 'Everything\'s Good (Good Ass Outro)', duration: '333', audioSrc: '/assets/music/acidrap/13.EverythingsGood.mp3' }
     ]
+  },{
+    title: '1999',
+    artist: 'Joey BadA$$',
+    releaseInfo: 'Cinematic Music Group',
+    albumCover: '/assets/images/album_covers/1999.jpg',
+    slug: '1999',
+    songs: [
+      { title: 'Summer Knights', duration: '116', audioSrc: '/assets/music/1999/01.SummerKnights.mp3' },
+      { title: 'Waves', duration: '212', audioSrc: '/assets/music/1999/02.Waves.mp3' },
+      { title: 'FromdaTomb Feat. Chunk Strangers', duration: '205', audioSrc: '/assets/music/1999/03.FromdaTomb.mp3' },
+      { title: 'Survival Tactics Feat. Capital STEEZ', duration: '203', audioSrc: '/assets/music/1999/04.SurvivalTactics.mp3' },
+      { title: 'Killuminati', duration: '154', audioSrc: '/assets/music/1999/05.Killuminati.mp3' },
+      { title: 'Hardknock Feat. CJ Fly', duration: '318', audioSrc: '/assets/music/1999/06.Hardknock.mp3' },
+      { title: 'World Domination', duration: '163', audioSrc: '/assets/music/1999/07.WorldDomination.mp3' },
+      { title: 'Pennyroyal', duration: '170', audioSrc: '/assets/music/1999/08.Pennyroyal.mp3' },
+      { title: 'Funky', duration: '269', audioSrc: '/assets/music/1999/09.FunkyHo.mp3' },
+      { title: 'Daily Routine', duration: '178', audioSrc: '/assets/music/1999/10.DailyRoutine.mp3' },
+      { title: 'Snakes Feat. T\'nah Apex', duration: '259', audioSrc: '/assets/music/1999/11.Snakes.mp3' },
+      { title: 'Don\'t Front Feat. CJ Fly', duration: '262', audioSrc: '/assets/music/1999/12.DontFront.mp3' },
+      { title: 'Righteous Minds', duration: '224', audioSrc: '/assets/music/1999/13.RighteousMinds.mp3' },
+      { title: 'Where It At Feat. Kirk Knight', duration: '249', audioSrc: '/assets/music/1999/14.WhereItAt.mp3' },
+      { title: 'Suspect Feat. PRO ERA', duration: '707', audioSrc: '/assets/music/1999/15.Suspect.mp3' },
+    ]
   }
 ];
