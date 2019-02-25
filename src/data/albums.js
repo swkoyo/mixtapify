@@ -68,5 +68,14 @@ export default [{
       { title: 'Cleveland Is The Reason', duration: '226', audioSrc: '/assets/music/AKNK/16.ClevelandIsTheReason.mp3' },
       { title: 'Heaven At Nite', duration: '197', audioSrc: '/assets/music/AKNK/17.HeavenAtNite.mp3' },
     ]
+  }, {
+    title: 'Acid Rap',
+    artist: 'Chance the Rapper',
+    releaseInfo: 'Soundscape Studios',
+    albumCover: '/assets/images/album_covers/acidrap.jpg',
+    slug: 'acid-rap',
+    songs: [
+      { title: 'Good Ass Intro'}
+    ]
   }
 ];
