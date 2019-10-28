@@ -43,3 +43,7 @@
   opacity: 0.6;
   transition-duration: .7s;
 }
+
+.album-image {
+	width: 100%;
+}
