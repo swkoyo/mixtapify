@@ -34,14 +34,7 @@ export default [{
       { title: 'Jeopardy', duration: '202', audioSrc: '/assets/music/RTJ2/01%20Jeopardy.mp3' },
       { title: 'Oh My Darling Don\'t Cry', duration: '205', audioSrc: '/assets/music/RTJ2/02%20Oh%20My%20Darling%20Don\'t%20Cry.mp3' },
       { title: 'Blockbuster Night Part 1', duration: '152', audioSrc: '/assets/music/RTJ2/03%20Blockbuster%20Night%20Part%201.mp3' },
-      { title: 'Close Your Eyes (And Count To F***) (Feat. Zack De La Rocha)', duration: '234', audioSrc: '/assets/music/RTJ2/04%20Close%20Your%20Eyes%20(And%20Count%20To%20Fuck)%20(Feat.%20Zack%20De%20La%20Rocha).mp3' },
-      { title: 'All My Life', duration: '188', audioSrc: '/assets/music/RTJ2/05%20All%20My%20Life.mp3' },
-      { title: 'Lie, Cheat, Steal', duration: '209', audioSrc: '/assets/music/RTJ2/06%20Lie,%20Cheat,%20Steal.mp3' },
-      { title: 'Early (feat. BOOTS)', duration: '224', audioSrc: '/assets/music/RTJ2/07%20Early%20(feat.%20BOOTS).mp3' },
-      { title: 'All Due Respect', duration: '168', audioSrc: '/assets/music/RTJ2/08%20All%20Due%20Respect%20(feat.%20Travis%20Barker).mp3' },
-      { title: 'Love Again (Akinyele Back) (feat. Gangsta Boo)', duration: '225', audioSrc: '/assets/music/RTJ2/09%20Love%20Again%20(Akinyele%20Back)%20(feat.%20Gangsta%20Boo).mp3' },
-      { title: 'Crown (feat. Diane Coffee)', duration: '226', audioSrc: '/assets/music/RTJ2/10%20Crown%20(feat.%20Diane%20Coffee).mp3' },
-      { title: 'Angel Duster', duration: '309', audioSrc: '/assets/music/RTJ2/11%20Angel%20Duster.mp3' },
+      { title: 'Close Your Eyes (And Count To F***) (Feat. Zack De La Rocha)', duration: '234', audioSrc: '/assets/music/RTJ2/04%20Close%20Your%20Eyes%20(And%20Count%20To%20Fuck)%20(Feat.%20Zack%20De%20La%20Rocha).mp3' }
     ]
   }, {
     title: 'A Kid Named Cudi',
@@ -53,20 +46,7 @@ export default [{
       { title: 'Intro', duration: '50', audioSrc: '/assets/music/AKNK/01.Intro.mp3' },
       { title: 'Down & Out', duration: '249', audioSrc: '/assets/music/AKNK/02.DownAndOut.mp3' },
       { title: 'Is There Any Love Feat. Wale ', duration: '211', audioSrc: '/assets/music/AKNK/03.IsThereAnyLove.mp3' },
-      { title: 'CuDi Get', duration: '140', audioSrc: '/assets/music/AKNK/04.CuDiGet.mp3' },
-      { title: 'Man On The Moon (The Anthem)', duration: '207', audioSrc: '/assets/music/AKNK/05.ManOnTheMoon.mp3' },
-      { title: 'The Prayer', duration: '219', audioSrc: '/assets/music/AKNK/06.ThePrayer.mp3' },
-      { title: 'Day N Nite', duration: '168', audioSrc: '/assets/music/AKNK/07.DayNNite.mp3' },
-      { title: 'Embrace The Martian Feat. KiD CuDi', duration: '215', audioSrc: '/assets/music/AKNK/08.EmbraceTheMartian.mp3' },
-      { title: 'Maui Wowie', duration: '144', audioSrc: '/assets/music/AKNK/09.MauiWowie.mp3' },
-      { title: '50 Ways To Make A Record', duration: '175', audioSrc: '/assets/music/AKNK/10.50WaysToMakeARecord.mp3' },
-      { title: 'Whenever', duration: '124', audioSrc: '/assets/music/AKNK/11.Whenever.mp3' },
-      { title: 'Pillow Talk', duration: '204', audioSrc: '/assets/music/AKNK/12.PillowTalk.mp3' },
-      { title: 'Save My Soul (The CuDi Confession)', duration: '123', audioSrc: '/assets/music/AKNK/13.SaveMySoul.mp3' },
-      { title: 'TGIF Feat. Chip The Ripper', duration: '143', audioSrc: '/assets/music/AKNK/14.TGIF.mp3' },
-      { title: 'CuDi Spazzin', duration: '186', audioSrc: '/assets/music/AKNK/15.CuDiSpazzin.mp3' },
-      { title: 'Cleveland Is The Reason', duration: '226', audioSrc: '/assets/music/AKNK/16.ClevelandIsTheReason.mp3' },
-      { title: 'Heaven At Nite', duration: '197', audioSrc: '/assets/music/AKNK/17.HeavenAtNite.mp3' },
+      { title: 'CuDi Get', duration: '140', audioSrc: '/assets/music/AKNK/04.CuDiGet.mp3' }
     ]
   }, {
     title: 'Acid Rap',
@@ -78,16 +58,7 @@ export default [{
       { title: 'Good Ass Intro', duration: '239', audioSrc: '/assets/music/acidrap/01.GoodAssIntro.mp3' },
       { title: 'Pusha Man', duration: '444', audioSrc: '/assets/music/acidrap/02.PushaMan.mp3' },
       { title: 'Cocoa Butter Kisses', duration: '307', audioSrc: '/assets/music/acidrap/03.CocoaButterKisses.mp3' },
-      { title: 'Juice', duration: '215', audioSrc: '/assets/music/acidrap/04.Juice.mp3' },
-      { title: 'Lost', duration: '185', audioSrc: '/assets/music/acidrap/05.Lost.mp3' },
-      { title: 'Everybody\'s Something', duration: '277', audioSrc: '/assets/music/acidrap/06.EverybodysSomething.mp3' },
-      { title: 'Interlude - That\'s Love', duration: '150', audioSrc: '/assets/music/acidrap/07.Interlude-ThatsLove.mp3' },
-      { title: 'Favorite Song', duration: '185', audioSrc: '/assets/music/acidrap/08.FavoriteSong.mp3' },
-      { title: 'NaNa', duration: '201', audioSrc: '/assets/music/acidrap/09.NaNa.mp3' },
-      { title: 'Smoke Again', duration: '273', audioSrc: '/assets/music/acidrap/10.SmokeAgain.mp3' },
-      { title: 'Acid Rain', duration: '216', audioSrc: '/assets/music/acidrap/11.AcidRain.mp3' },
-      { title: 'Chain Smoker', duration: '211', audioSrc: '/assets/music/acidrap/12.ChainSmoker.mp3' },
-      { title: 'Everything\'s Good (Good Ass Outro)', duration: '333', audioSrc: '/assets/music/acidrap/13.EverythingsGood.mp3' }
+      { title: 'Juice', duration: '215', audioSrc: '/assets/music/acidrap/04.Juice.mp3' }
     ]
   }, {
     title: '1999',
@@ -99,18 +70,7 @@ export default [{
       { title: 'Summer Knights', duration: '116', audioSrc: '/assets/music/1999/01.SummerKnights.mp3' },
       { title: 'Waves', duration: '212', audioSrc: '/assets/music/1999/02.Waves.mp3' },
       { title: 'FromdaTomb Feat. Chunk Strangers', duration: '205', audioSrc: '/assets/music/1999/03.FromdaTomb.mp3' },
-      { title: 'Survival Tactics Feat. Capital STEEZ', duration: '203', audioSrc: '/assets/music/1999/04.SurvivalTactics.mp3' },
-      { title: 'Killuminati', duration: '154', audioSrc: '/assets/music/1999/05.Killuminati.mp3' },
-      { title: 'Hardknock Feat. CJ Fly', duration: '318', audioSrc: '/assets/music/1999/06.Hardknock.mp3' },
-      { title: 'World Domination', duration: '163', audioSrc: '/assets/music/1999/07.WorldDomination.mp3' },
-      { title: 'Pennyroyal', duration: '170', audioSrc: '/assets/music/1999/08.Pennyroyal.mp3' },
-      { title: 'Funky', duration: '269', audioSrc: '/assets/music/1999/09.FunkyHo.mp3' },
-      { title: 'Daily Routine', duration: '178', audioSrc: '/assets/music/1999/10.DailyRoutine.mp3' },
-      { title: 'Snakes Feat. T\'nah Apex', duration: '259', audioSrc: '/assets/music/1999/11.Snakes.mp3' },
-      { title: 'Don\'t Front Feat. CJ Fly', duration: '262', audioSrc: '/assets/music/1999/12.DontFront.mp3' },
-      { title: 'Righteous Minds', duration: '224', audioSrc: '/assets/music/1999/13.RighteousMinds.mp3' },
-      { title: 'Where It At Feat. Kirk Knight', duration: '249', audioSrc: '/assets/music/1999/14.WhereItAt.mp3' },
-      { title: 'Suspect Feat. PRO ERA', duration: '707', audioSrc: '/assets/music/1999/15.Suspect.mp3' },
+      { title: 'Survival Tactics Feat. Capital STEEZ', duration: '203', audioSrc: '/assets/music/1999/04.SurvivalTactics.mp3' }
     ]
   }, {
     title: 'LiveLoveASAP',
@@ -122,19 +82,7 @@ export default [{
       { title: 'Palace', duration: '166', audioSrc: '/assets/music/liveloveasap/01.Palace.mp3' },
       { title: 'Peso', duration: '171', audioSrc: '/assets/music/liveloveasap/02.Peso.mp3' },
       { title: 'Bass', duration: '201', audioSrc: '/assets/music/liveloveasap/03.Bass.mp3' },
-      { title: 'Wassup', duration: '161', audioSrc: '/assets/music/liveloveasap/04.Wassup.mp3' },
-      { title: 'Brand New Guy Feat. Schoolboy Q', duration: '291', audioSrc: '/assets/music/liveloveasap/05.BrandNewGuy.mp3' },
-      { title: 'Purple Swag: Chapter 2 Feat. Spaceghost Purrp & A$AP Nast', duration: '170', audioSrc: '/assets/music/liveloveasap/06.PurpleSwag.mp3' },
-      { title: 'Get Lit Feat. Fat Tony', duration: '182', audioSrc: '/assets/music/liveloveasap/07-ASAP_Rocky-Get_Lit_Feat_Fat_Tony_Prod_By_Soufein3000.mp3' },
-      { title: 'Trilla Feat. A$AP Twelvy & A$AP Nast', duration: '248', audioSrc: '/assets/music/liveloveasap/08-ASAP_Rocky-Trilla_Feat_ASAP_Twelvy_ASAP_Nast_Prod_By_Beautiful_Lou.mp3' },
-      { title: 'Keep It G Feat. Chance Infinite & Spaceghost Purrp', duration: '233', audioSrc: '/assets/music/liveloveasap/09-ASAP_Rocky-Keep_It_G_Feat_Chace_Infinite_Spaceghost_Purrp_Prod_By_Spaceghost_Purrp.mp3' },
-      { title: 'Kissin\' Pink Feat. A$AP Ferg', duration: '215', audioSrc: '/assets/music/liveloveasap/10-ASAP_Rocky-Kissin_Pink_Feat_ASAP_Ferg_Prod_By_Beautiful_Lou.mp3' },
-      { title: 'Houston Old Head', duration: '262', audioSrc: '/assets/music/liveloveasap/11-ASAP_Rocky-Houston_Old_Head_Prod_By_DJ_Burn_One.mp3' },
-      { title: 'Acid Drip', duration: '167', audioSrc: '/assets/music/liveloveasap/12-ASAP_Rocky-Acid_Drip_Prod_By_Soufein3000.mp3' },
-      { title: 'Leaf Feat. Main Attrakionz', duration: '295', audioSrc: '/assets/music/liveloveasap/13-ASAP_Rocky-Leaf_Feat_Main_Attrakionz_Prod_By_Clams_Casino.mp3' },
-      { title: 'Roll One Up', duration: '163', audioSrc: '/assets/music/liveloveasap/14-ASAP_Rocky-Roll_One_Up_Prod_By_DJ_Burn_One.mp3' },
-      { title: 'Demons', duration: '184', audioSrc: '/assets/music/liveloveasap/15-ASAP_Rocky-Demons_Prod_By_Clams_Casino.mp3' },
-      { title: 'Out Of This World', duration: '171', audioSrc: '/assets/music/liveloveasap/16-ASAP_Rocky-Out_Of_This_World_Prod_By_The_Olympicks.mp3' },
+      { title: 'Wassup', duration: '161', audioSrc: '/assets/music/liveloveasap/04.Wassup.mp3' }
     ]
   }, {
     title: 'BetterOffDEAD',
@@ -146,22 +94,7 @@ export default [{
       { title: 'Amerikan Pie', duration: '269', audioSrc: '/assets/music/betteroffdead/01.AmerikkkanPie.mp3' },
       { title: 'Nephilim', duration: '200', audioSrc: '/assets/music/betteroffdead/02.Nephilim.mp3' },
       { title: 'Bliss', duration: '204', audioSrc: '/assets/music/betteroffdead/03.Bliss.mp3' },
-      { title: 'Mine', duration: '118', audioSrc: '/assets/music/betteroffdead/04.Minephuck.mp3' },
-      { title: 'G Tearz', duration: '258', audioSrc: '/assets/music/betteroffdead/05.GTearz.mp3' },
-      { title: 'Death', duration: '220', audioSrc: '/assets/music/betteroffdead/06.Death.mp3' },
-      { title: 'Death 2', duration: '89', audioSrc: '/assets/music/betteroffdead/07.Death2.mp3' },
-      { title: 'Regular and Complex', duration: '295', audioSrc: '/assets/music/betteroffdead/08.RegularandComplex.mp3' },
-      { title: 'Thugnificense', duration: '183', audioSrc: '/assets/music/betteroffdead/09.Thugnificense.mp3' },
-      { title: 'Club Soda Feat. Action Bronson', duration: '245', audioSrc: '/assets/music/betteroffdead/10.ClubSoda.mp3' },
-      { title: 'LiveFromHell', duration: '153', audioSrc: '/assets/music/betteroffdead/11.LiveFromHell.mp3' },
-      { title: 'Palm Trees', duration: '261', audioSrc: '/assets/music/betteroffdead/12.PalmTrees.mp3' },
-      { title: '222', duration: '276', audioSrc: '/assets/music/betteroffdead/13.222.mp3' },
-      { title: 'Parade Feat. Danny Brown', duration: '178', audioSrc: '/assets/music/betteroffdead/14.DrugParade.mp3' },
-      { title: 'TP4', duration: '165', audioSrc: '/assets/music/betteroffdead/15.TP4.mp3' },
-      { title: 'GOD Blessed The DEAD', duration: '137', audioSrc: '/assets/music/betteroffdead/16.GODBlessedtheDEAD.mp3' },
-      { title: 'MRAZ', duration: '294', audioSrc: '/assets/music/betteroffdead/17.MRAZ.mp3' },
-      { title: 'My Team, SUPREME', duration: '161', audioSrc: '/assets/music/betteroffdead/018.MyTeamSUPREME.mp3' },
-      { title: 'The Results Are In', duration: '260', audioSrc: '/assets/music/betteroffdead/19.TheResultsAreIn.mp3' },
+      { title: 'Mine', duration: '118', audioSrc: '/assets/music/betteroffdead/04.Minephuck.mp3' }
     ]
   }
 ];
