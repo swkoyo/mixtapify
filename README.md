@@ -2,7 +2,7 @@
 
 ![Gif](https://i.imgur.com/Yo5QLI8.gif)
 
-SPA Spotify-clone that uses React Router to create a responsive page that holds free mixtapes that users can listen to
+SPA Spotify-clone that uses React Router to create a responsive page that holds free mixtapes that users can listen to.
 
 
 ## Built With
