@@ -65,11 +65,10 @@ class Album extends Component {
   }
 
   setRestToSongIndex(song) {
-    this.state.album.songs.map(songInArr => {
+    this.state.album.songs.forEach(songInArr => {
       if (songInArr !== song) {
         this.showSongIndex(this.getButtons(this.state.album.songs.indexOf(songInArr)));
       }
-	  return;
     });
   }
 
