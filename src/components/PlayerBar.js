@@ -106,7 +106,7 @@ class PlayerBar extends Component {
               <Icon name='forward'></Icon>
             </Menu.Item>
             <Menu.Item
-              centered
+              centered={true}
               style={{
                 'margin': '0 auto'
               }}

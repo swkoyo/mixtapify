@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import { Route, Link } from 'react-router-dom';
-import { Container, Button, Input, Grid, Card, Image, Header } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import { Container, Button, Grid, Card, Image, Header } from 'semantic-ui-react';
 import './landing.css';
 
 const Landing = () => (

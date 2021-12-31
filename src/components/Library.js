@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import albumData from './../data/albums';
-import { Grid, Image, Header, Divider, Container, Card } from 'semantic-ui-react';
+import { Grid, Image, Header, Container, Card } from 'semantic-ui-react';
 import './library.css';
 
 class Library extends Component {
