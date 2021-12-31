@@ -69,6 +69,7 @@ class Album extends Component {
       if (songInArr !== song) {
         this.showSongIndex(this.getButtons(this.state.album.songs.indexOf(songInArr)));
       }
+	  return;
     });
   }
 
